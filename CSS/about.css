@@ -1,0 +1,292 @@
+/* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Section */
+        .hero {
+            background-color: #3a86ff; /* Blue solid color instead of image */
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .divider {
+            height: 4px;
+            width: 100px;
+            background-color: #ff006e; /* Pink divider */
+            margin: 30px auto;
+        }
+
+        /* Mission Section */
+        .mission {
+            margin-bottom: 60px;
+        }
+
+        .mission h2, .vision h2, .team h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #2b2d42;
+        }
+
+        .mission p {
+            margin-bottom: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .checklist {
+            max-width: 500px;
+            margin: 30px auto;
+        }
+
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: #f1faee;
+            border-radius: 5px;
+        }
+
+        .checklist-item::before {
+            content: "✓";
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            background-color: #4cc9f0;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 25px;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        /* Vision Section */
+        .vision {
+            margin-bottom: 60px;
+            background-color: #f8f9fa;
+            padding: 40px 0;
+        }
+
+        .vision-items {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .vision-item {
+            flex: 1;
+            min-width: 250px;
+            max-width: 300px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .vision-item h3 {
+            color: #3a86ff;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        /* Team Section */
+        .team {
+            margin-bottom: 60px;
+        }
+
+        .team-members {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .team-member {
+            flex: 1;
+            min-width: 250px;
+            max-width: 300px;
+            text-align: center;
+        }
+
+        .member-photo {
+            width: 150px;
+            height: 150px;
+            background-color: #a2d2ff; /* Light blue placeholder for photo */
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .member-info h3 {
+            color: #2b2d42;
+            margin-bottom: 5px;
+        }
+
+        .member-info p:first-of-type {
+            color: #3a86ff;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        /* Stats Section */
+        .stats {
+            background-color: #2b2d42;
+            color: white;
+            padding: 60px 0;
+            margin-bottom: 60px;
+        }
+
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .stat-item {
+            text-align: center;
+            min-width: 150px;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .stat-number.blue { color: #4cc9f0; }
+        .stat-number.green { color: #80ffdb; }
+        .stat-number.purple { color: #b388eb; }
+        .stat-number.yellow { color: #ffd166; }
+
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2b2d42;
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-about {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .footer-about h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #ffd166;
+        }
+
+        .footer-links, .footer-contact {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer-links h4, .footer-contact h4 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #ffd166;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #4cc9f0;
+        }
+
+        .footer-contact p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-contact p::before {
+            content: "•";
+            margin-right: 10px;
+            color: #4cc9f0;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #4a4e69;
+            color: #adb5bd;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .vision-items, .team-members, .stats-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .vision-item, .team-member, .stat-item {
+                max-width: 100%;
+            }
+        }
