@@ -10,6 +10,8 @@
             line-height: 1.6;
             color: #333;
             background-color: #f8f9fa;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: #4b5563;
         }
 
         .container {
@@ -92,7 +94,7 @@
         /* Hero Section */
         .hero {
             background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                        url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+                        url('../images/herosection.png');
             background-size: cover;
             background-position: center;
             color: white;
@@ -206,6 +208,7 @@
             background: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80') center/cover;
             border-radius: 8px;
             min-height: 300px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         }
 
         /* CTA Section */
@@ -215,12 +218,12 @@
         }
 
         .cta h2 {
-            max-width: 600px;
+            max-width: 100%;
             margin: 0 auto 20px;
         }
 
         .cta p {
-            max-width: 500px;
+            max-width: 100%;
             margin: 0 auto 30px;
             color: #4a4e69;
         }
