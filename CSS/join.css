@@ -8,10 +8,13 @@
         body {
             background-color: #f8f9fa;
             min-height: 100vh;
+        }
+
+        .container{
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
         }
         
         .auth-container {
