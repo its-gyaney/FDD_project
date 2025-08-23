@@ -80,8 +80,8 @@
             background-position: center;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            width: 50%;
-            height: auto;
+            min-width: 50%;
+            min-height: 300px;
         }
 
         .mission .container{
@@ -243,4 +243,10 @@
             .vision-item, .team-member, .stat-item {
                 max-width: 100%;
             }
+
+            .mission{
+                flex-direction: column;
+                padding: 30px;
+            }
+            
         }
