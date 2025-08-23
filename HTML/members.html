@@ -5,60 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Members Portal - EduSphere</title>
     <link rel="stylesheet" href="../CSS/members.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Auth Section -->
-    <section class="section auth-section">
-        <div class="container">
-            <h1 class="section-title">Members Portal</h1>
-            <p class="section-subtitle">Join our community or access your account</p>
-            
-            <div class="auth-container">
-                <div class="auth-tabs">
-                    <div class="auth-tab active" data-tab="login">Login</div>
-                    <div class="auth-tab" data-tab="register">Register</div>
-                </div>
-                
-                <!-- Login Form -->
-                <form id="login-form" class="auth-form active">
-                    <div class="form-group">
-                        <label for="login-email">Email Address</label>
-                        <input type="email" id="login-email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="login-password">Password</label>
-                        <input type="password" id="login-password" required>
-                    </div>
-                    <button type="submit" class="auth-btn">Login</button>
-                    <div class="forgot-password">
-                        <a href="#">Forgot your password?</a>
-                    </div>
-                </form>
-                
-                <!-- Register Form -->
-                <form id="register-form" class="auth-form">
-                    <div class="form-group">
-                        <label for="register-name">Full Name</label>
-                        <input type="text" id="register-name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="register-email">Email Address</label>
-                        <input type="email" id="register-email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="register-password">Password</label>
-                        <input type="password" id="register-password" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="register-confirm-password">Confirm Password</label>
-                        <input type="password" id="register-confirm-password" required>
-                    </div>
-                    <button type="submit" class="auth-btn">Register</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
     <!-- Benefits Section -->
     <section class="section benefits">
         <div class="container">
@@ -67,76 +16,55 @@
             <div class="divider"></div>
             
             <div class="benefits-grid">
-                <div class="benefit-card">
+                <a href="resources.html" class="benefit-card">
                     <div class="benefit-icon">📚</div>
                     <h3 class="benefit-title">Exclusive Resources</h3>
                     <p>Access premium study materials, research papers, and academic tools</p>
-                </div>
+                </a>
                 
-                <div class="benefit-card">
+                <a href="#" class="benefit-card">
                     <div class="benefit-icon">📈</div>
                     <h3 class="benefit-title">Achievement Tracking</h3>
                     <p>Monitor your academic progress and celebrate milestones</p>
-                </div>
+                </a>
                 
-                <div class="benefit-card">
+                <a href="#" class="benefit-card">
                     <div class="benefit-icon">👥</div>
                     <h3 class="benefit-title">Study Groups</h3>
                     <p>Join subject-specific study groups and collaborate with peers</p>
-                </div>
+                </a>
                 
-                <div class="benefit-card">
+                <a href="#" class="benefit-card">
                     <div class="benefit-icon">💬</div>
                     <h3 class="benefit-title">Peer Support</h3>
                     <p>Get help from experienced students and mentors</p>
-                </div>
+                </a>
                 
-                <div class="benefit-card">
+                <a href="#" class="benefit-card">
                     <div class="benefit-icon">🎟️</div>
                     <h3 class="benefit-title">Priority Events</h3>
                     <p>Early access to workshops, seminars, and academic events</p>
-                </div>
+                </a>
                 
-                <div class="benefit-card">
+                <a href="#" class="benefit-card">
                     <div class="benefit-icon">🏆</div>
                     <h3 class="benefit-title">Recognition</h3>
                     <p>Earn badges and recognition for your contributions</p>
-                </div>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-about">
-                    <h3>EduSphere</h3>
-                    <p>Your premier student academic hub connecting learners, sharing knowledge, and building academic communities.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="activities.html">Activities</a></li>
-                        <li><a href="resources.html">Resources</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4>Contact Info</h4>
-                    <p>info@edusphere.edu</p>
-                    <p>(555) 123-4567</p>
-                    <p>123 Education St, Learning City</p>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2024 EduSphere. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <!-- Join Button -->
+     <div class="join-button">
+        <h2>Join our community to get access</h2>
+        <a href="join.html">
+            <button>Join Now</button>
+        </a>
+     </div>
 
     <script src="../JS/members.js"></script>
     <script src="../JS/load-navbar.js"></script>
+    <script src="../JS/load-footer.js"></script>
 </body>
 </html>
