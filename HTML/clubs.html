@@ -18,26 +18,35 @@
         
         <section class="section">
             <h2>Academic Clubs</h2>
-            <div class="highlights-container">
+            <div class="highlights-container" style="display: flex;">
                 <div class="highlight-card">
                     <img src="../images/computerscience.jpeg" alt="Computer Science Club" class="club-image">
-                    <h3>Computer Science Club</h3>
-                    <p>Weekly coding workshops, hackathons, and guest speakers from the tech industry.</p>
-                    <div class="date">Meets: Tuesdays, 4-6pm</div>
+                    <div class="card-text">
+                        <h3>Computer Science Club</h3>
+                        <p>Weekly coding workshops, hackathons, and guest speakers from the tech industry.</p>
+                        <div class="date">Meets: Tuesdays, 4-6pm</div>
+                    </div>
+                    <button type="button" class="enrollbutton">Enroll Now</button>
                 </div>
                 
                 <div class="highlight-card">
                     <img src="../images/debate society.jpeg" alt="Debate Society" class="club-image">
-                    <h3>Debate Society</h3>
-                    <p>Develop public speaking and critical thinking skills through competitive debate.</p>
-                    <div class="date">Meets: Wednesdays, 5-7pm</div>
+                    <div class="card-text">
+                        <h3>Debate Society</h3>
+                        <p>Develop public speaking and critical thinking skills through competitive debate.</p>
+                        <div class="date">Meets: Wednesdays, 5-7pm</div>
+                    </div>
+                    <button type="button" class="enrollbutton">Enroll Now</button>
                 </div>
                 
                 <div class="highlight-card">
                     <img src="../images/science&research.jpg" alt="Research Club" class="club-image">
-                    <h3>Science & Research Club</h3>
-                    <p>Hands-on experiments, research projects, and science fair preparation.</p>
-                    <div class="date">Meets: Thursdays, 3-5pm</div>
+                    <div class="card-text">
+                        <h3>Science & Research Club</h3>
+                        <p>Hands-on experiments, research projects, and science fair preparation.</p>
+                        <div class="date">Meets: Thursdays, 3-5pm</div>
+                    </div>
+                    <button type="button" class="enrollbutton">Enroll Now</button>
                 </div>
             </div>
         </section>
@@ -45,38 +54,50 @@
         <section class="section">
             <h2>Cultural & Arts Clubs</h2>
 
-                
+            <div class="highlights-container">
                 <div class="highlight-card">
                     <img src="../images/artclub.jpg" alt="Creative Writing Club" class="club-image">
-                    <h3>Art Club</h3>
-                    <p>Workshops, exhibitions, and creative projects for artists of all skill levels. Explore painting, sculpture, digital art, and collaborative installations.</p>
-                    <div class="date">Meets: Mondays, 6-8pm</div>
+                    <div class="card-text">
+                        <h3>Art Club</h3>
+                        <p>Workshops, exhibitions, and creative projects for artists of all skill levels. Explore painting, sculpture, digital art, and collaborative installations.</p>
+                        <div class="date">Meets: Mondays, 6-8pm</div>
+                    </div>
+                    <button type="button" class="enrollbutton">Enroll Now</button>
                 </div>
                 
                 <div class="highlight-card">
                     <img src="../images/photography.jpg" alt="Photography Society" class="club-image">
-                    <h3>Photography Society</h3>
-                    <p>Photo walks, technique workshops, and exhibition opportunities.</p>
-                    <div class="date">Meets: Saturdays, 10am-12pm</div>
+                    <div class="card-text">
+                        <h3>Photography Society</h3>
+                        <p>Photo walks, technique workshops, and exhibition opportunities.</p>
+                        <div class="date">Meets: Saturdays, 10am-12pm</div>
+                    </div>
+                    <button type="button" class="enrollbutton">Enroll Now</button>
                 </div>
             </div>
         </section>
         
         <section class="section">
             <h2>Special Interest Clubs</h2>
-            <div class="highlights-container">
+            <div class="highlights-container" style="display: flex;">
                 <div class="highlight-card">
                     <img src="../images/robotics.jpeg" alt="Robotics Club" class="club-image">
-                    <h3>Robotics Club</h3>
-                    <p>Design, build, and program robots for competitions and research projects.</p>
-                    <div class="date">Meets: Tuesdays & Thursdays, 5-7pm</div>
+                    <div class="card-text">
+                        <h3>Robotics Club</h3>
+                        <p>Design, build, and program robots for competitions and research projects.</p>
+                        <div class="date">Meets: Tuesdays & Thursdays, 5-7pm</div>
+                    </div>
+                    <button type="button" class="enrollbutton">Enroll Now</button>
                 </div>
                 
                 <div class="highlight-card">
                     <img src="../images/enterprenurship.jpg" alt="Entrepreneurship Society" class="club-image">
-                    <h3>Entrepreneurship Society</h3>
-                    <p>Startup workshops, pitch competitions, and networking with entrepreneurs.</p>
-                    <div class="date">Meets: Mondays, 5-7pm</div>
+                    <div class="card-text">
+                        <h3>Entrepreneurship Society</h3>
+                        <p>Startup workshops, pitch competitions, and networking with entrepreneurs.</p>
+                        <div class="date">Meets: Mondays, 5-7pm</div>
+                    </div>
+                    <button type="button" class="enrollbutton">Enroll Now</button>
                 </div>
             </div>
         </section>
@@ -88,7 +109,19 @@
         </section>
     </div>
 
+    <!-- Login Required Modal -->
+    <div id="loginModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="modal-close" id="modalClose">&times;</span>
+            <h2>Login Required</h2>
+            <p>You need to login to get access to this feature.</p>
+            <a href="../HTML/join.html">
+                <button class="modal-join-btn">Join Now</button>
+            </a>
+        </div>
+    </div>
     <script src="../JS/load-footer.js"></script>
     <script src="../JS/load-navbar.js"></script>
+    <script src="../JS/activities.js"></script>
 </body>
 </html>

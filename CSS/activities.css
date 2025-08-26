@@ -1,3 +1,62 @@
+/* Modal Styles */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.4);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+.modal-overlay.active {
+    display: flex;
+}
+.modal-content {
+    background: #fff;
+    border-radius: 12px;
+    padding: 40px 32px 32px 32px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    text-align: center;
+    min-width: 320px;
+    max-width: 90vw;
+    position: relative;
+    animation: modalIn 0.2s cubic-bezier(.4,2,.6,1) both;
+}
+@keyframes modalIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+.modal-close {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    font-size: 2rem;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.modal-close:hover {
+    color: #ff006e;
+}
+.modal-join-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 4px;
+    border-style: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin: 20px 5px 0 5px;
+    background-color: #3a86ff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+.modal-join-btn:hover {
+    background-color: #2667cc;
+}
 /* ==============================
    EduSphere Color Variables
    ============================== */
@@ -87,6 +146,10 @@ p {
     padding: 30px;
     margin-bottom: 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .section-image {
@@ -96,6 +159,29 @@ p {
     border-radius: 8px;
     margin-bottom: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+     
+.club-image{
+    width:100%;
+    height: 15rem;
+    object-fit: cover;
+    object-position: center;
+}
+
+.enrollbutton{
+    padding: 10px;
+    border-style: none;
+    background-color: var(--primary-blue);
+    border-radius: 5px;
+    color: #fff;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.enrollbutton:hover{
+    background-color: var(--gradient-dark);
 }
 
 .section-link {
@@ -121,6 +207,7 @@ p {
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    display: flex;
     gap: 15px;
     margin-top: 20px;
 }
@@ -152,6 +239,7 @@ p {
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 25px;
     margin-top: 20px;
+    /* display: flex; */
 }
 
 .highlight-card {
@@ -160,6 +248,10 @@ p {
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-text{
+    padding: 20px;
 }
 
 .highlight-card:hover {
@@ -238,6 +330,14 @@ p {
     font-size: 1.25rem;
     max-width: 600px;
     margin: 0 auto;
+}
+
+.back-link{
+    text-decoration: none;
+    background-color: var(--primary-blue);
+    padding: 10px;
+    color: #fff;
+    border-radius: 5px;
 }
 
 /* ==============================

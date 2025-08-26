@@ -1,3 +1,62 @@
+/* Modal Styles */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.4);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+.modal-overlay.active {
+    display: flex;
+}
+.modal-content {
+    background: #fff;
+    border-radius: 12px;
+    padding: 40px 32px 32px 32px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    text-align: center;
+    min-width: 320px;
+    max-width: 90vw;
+    position: relative;
+    animation: modalIn 0.2s cubic-bezier(.4,2,.6,1) both;
+}
+@keyframes modalIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+.modal-close {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    font-size: 2rem;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.modal-close:hover {
+    color: #ff006e;
+}
+.modal-join-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 4px;
+    border-style: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin: 20px 5px 0 5px;
+    background-color: #3a86ff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+.modal-join-btn:hover {
+    background-color: #2667cc;
+}
  /* Base Styles */
         * {
             margin: 0;

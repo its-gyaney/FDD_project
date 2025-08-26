@@ -20,26 +20,35 @@
         <!-- September 2025 -->
         <section class="section">
             <h2>September 2025</h2>
-            <div class="highlights-container">
+            <div class="highlights-container" style="display: flex;">
                 <div class="highlight-card">
                     <img src="../images/careerfair.jpeg" alt="Spring Career Fair" class="highlight-image">
-                    <h3>Spring Career Fair</h3>
-                    <p>Connect with top employers seeking interns and full-time employees. Bring your resume!</p>
-                    <div class="date">March 20, 2025 | 10am-3pm | University Hall</div>
+                    <div class="card-text">
+                        <h3>Spring Career Fair</h3>
+                        <p>Connect with top employers seeking interns and full-time employees. Bring your resume!</p>
+                        <div class="date">March 20, 2025 | 10am-3pm | University Hall</div>
+                    </div>
+                    <button type="button" class="enrollbutton">Book Now</button>
                 </div>
                 
                 <div class="highlight-card">
                     <img src="../images/hakathon.png" alt="Hackathon: Tech for Good" class="highlight-image">
-                    <h3>Hackathon: Tech for Good</h3>
-                    <p>24-hour coding competition focused on developing solutions for social challenges.</p>
-                    <div class="date">March 25-26, 2025 | Innovation Lab</div>
+                    <div class="card-text">
+                        <h3>Hackathon: Tech for Good</h3>
+                        <p>24-hour coding competition focused on developing solutions for social challenges.</p>
+                        <div class="date">March 25-26, 2025 | Innovation Lab</div>
+                    </div>
+                    <button type="button" class="enrollbutton">Book Now</button>
                 </div>
                 
                 <div class="highlight-card">
                     <img src="../images/food fest.jpg" alt="International Food Festival" class="highlight-image">
-                    <h3>International Food Festival</h3>
-                    <p>Sample cuisine from around the world prepared by our international student community.</p>
-                    <div class="date">March 28, 2025 | 12-4pm | Student Center Plaza</div>
+                    <div class="card-text">
+                        <h3>International Food Festival</h3>
+                        <p>Sample cuisine from around the world prepared by our international student community.</p>
+                        <div class="date">March 28, 2025 | 12-4pm | Student Center Plaza</div>
+                    </div>
+                    <button type="button" class="enrollbutton">Book Now</button>
                 </div>
             </div>
         </section>
@@ -47,19 +56,25 @@
         <!-- October 2025 -->
         <section class="section">
             <h2>October 2025</h2>
-            <div class="highlights-container">
+            <div class="highlights-container" style="display: flex;">
                 <div class="highlight-card">
                     <img src="../images/Research Symposium.jpg" alt="Research Symposium" class="highlight-image">
-                    <h3>Research Symposium</h3>
-                    <p>Showcase of student research projects across all disciplines. Open to the public.</p>
-                    <div class="date">April 5, 2025 | 9am-4pm | Science Building</div>
+                    <div class="card-text">
+                        <h3>Research Symposium</h3>
+                        <p>Showcase of student research projects across all disciplines. Open to the public.</p>
+                        <div class="date">April 5, 2025 | 9am-4pm | Science Building</div>
+                    </div>
+                    <button type="button" class="enrollbutton">Book Now</button>
                 </div>
                 
                 <div class="highlight-card">
                     <img src="../images/music-festival.jpg" alt="Spring Music Festival" class="highlight-image">
-                    <h3>Spring Music Festival</h3>
-                    <p>Performances by student bands, orchestra, and choir ensembles.</p>
-                    <div class="date">April 12, 2025 | 2-8pm | Amphitheater</div>
+                    <div class="card-text">
+                        <h3>Spring Music Festival</h3>
+                        <p>Performances by student bands, orchestra, and choir ensembles.</p>
+                        <div class="date">April 12, 2025 | 2-8pm | Amphitheater</div>
+                    </div>
+                    <button type="button" class="enrollbutton">Book Now</button>
                 </div>
                 
             </div>
@@ -72,7 +87,19 @@
         </section>
     </div>
 
-        <script src="../JS/load-footer.js"></script>
+    <!-- Login Required Modal -->
+    <div id="loginModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="modal-close" id="modalClose">&times;</span>
+            <h2>Login Required</h2>
+            <p>You need to login to get access to this feature.</p>
+            <a href="../HTML/join.html">
+                <button class="modal-join-btn">Join Now</button>
+            </a>
+        </div>
+    </div>
+    <script src="../JS/load-footer.js"></script>
     <script src="../JS/load-navbar.js"></script>
+    <script src="../JS/activities.js"></script>
 </body>
 </html>

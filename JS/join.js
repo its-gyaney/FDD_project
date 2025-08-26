@@ -45,49 +45,57 @@ document.addEventListener('DOMContentLoaded', function() {
             function validateLoginForm() {
                 const email = document.getElementById('login-email').value;
                 const password = document.getElementById('login-password').value;
-                
                 if (!email || !password) {
                     alert('Please fill in all fields');
                     return;
                 }
-                
                 if (!isValidEmail(email)) {
                     alert('Please enter a valid email address');
                     return;
                 }
-                
-                // Simulate successful login
+                // Retrieve users from localStorage
+                const users = JSON.parse(localStorage.getItem('users') || '[]');
+                const user = users.find(u => u.email === email && u.password === password);
+                if (!user) {
+                    alert("User ID or password not matched or don't have any account.");
+                    return;
+                }
+                // Successful login
+                localStorage.setItem('loggedInUser', JSON.stringify(user));
                 alert('Login successful! Redirecting...');
-                // In a real application, you would submit the form to a server here
+                window.location.href = 'index.html';
             }
-            
+
             function validateRegisterForm() {
                 const name = document.getElementById('register-name').value;
                 const email = document.getElementById('register-email').value;
                 const password = document.getElementById('register-password').value;
                 const confirmPassword = document.getElementById('register-confirm-password').value;
-                
                 if (!name || !email || !password || !confirmPassword) {
                     alert('Please fill in all fields');
                     return;
                 }
-                
                 if (!isValidEmail(email)) {
                     alert('Please enter a valid email address');
                     return;
                 }
-                
                 if (password.length < 8) {
                     alert('Password must be at least 8 characters long');
                     return;
                 }
-                
                 if (password !== confirmPassword) {
                     alert('Passwords do not match');
                     return;
                 }
-                
-                // Simulate successful registration
+                // Retrieve users from localStorage
+                let users = JSON.parse(localStorage.getItem('users') || '[]');
+                if (users.find(u => u.email === email)) {
+                    alert('An account with this email already exists.');
+                    return;
+                }
+                // Save new user
+                users.push({ name, email, password });
+                localStorage.setItem('users', JSON.stringify(users));
                 alert('Registration successful! You can now login.');
                 switchToLogin();
             }
