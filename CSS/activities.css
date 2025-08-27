@@ -1,0 +1,510 @@
+/* Modal Styles */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.4);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+.modal-overlay.active {
+    display: flex;
+}
+.modal-content {
+    background: #fff;
+    border-radius: 12px;
+    padding: 40px 32px 32px 32px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    text-align: center;
+    min-width: 320px;
+    max-width: 90vw;
+    position: relative;
+    animation: modalIn 0.2s cubic-bezier(.4,2,.6,1) both;
+}
+@keyframes modalIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+.modal-close {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    font-size: 2rem;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.modal-close:hover {
+    color: #ff006e;
+}
+.modal-join-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 4px;
+    border-style: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin: 20px 5px 0 5px;
+    background-color: #3a86ff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+.modal-join-btn:hover {
+    background-color: #2667cc;
+}
+/* ==============================
+   EduSphere Color Variables
+   ============================== */
+:root {
+    --primary-blue: #3a86ff;
+    --pink-accent: #ff006e;
+    --dark-blue: #2b2d42;
+    --light-gray: #f8f9fa;
+    --white: #ffffff;
+    --light-blue: #4cc9f0;
+    --yellow: #ffd166;
+    --teal: #1dd1a1;
+    --purple: #5f27cd;
+    --gold: #feca57;
+    --coral: #ff6b6b;
+    --dark-gray: #333;
+    --medium-gray: #6c757d;
+    --border-gray: #ddd;
+    --pale-blue: #e9f5ff;
+    --gradient-dark: #16213e;
+}
+
+/* ==============================
+   Base Styles
+   ============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Hero Section Text Color */
+.hero-section .overlay h1 {
+    color: var(--white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+body {
+    background-color: var(--light-gray);
+    color: var(--dark-gray);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    color: var(--dark-blue);
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    position: relative;
+}
+
+h1::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: var(--pink-accent);
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+h2 {
+    color: var(--dark-blue);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--light-blue);
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+/* ==============================
+   Section Styles
+   ============================== */
+.section {
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+     
+.club-image{
+    width:100%;
+    height: 15rem;
+    object-fit: cover;
+    object-position: center;
+}
+
+.enrollbutton{
+    padding: 10px;
+    border-style: none;
+    background-color: var(--primary-blue);
+    border-radius: 5px;
+    color: #fff;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.enrollbutton:hover{
+    background-color: var(--gradient-dark);
+}
+
+.section-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: var(--primary-blue);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.section-link:hover {
+    background-color: var(--dark-blue);
+    transform: translateY(-2px);
+}
+
+/* ==============================
+   Gallery Styles
+   ============================== */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.gallery-item {
+    height: 200px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* ==============================
+   Highlights Styles
+   ============================== */
+.highlights-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+    /* display: flex; */
+}
+
+.highlight-card {
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-text{
+    padding: 20px;
+}
+
+.highlight-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.highlight-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 4px solid var(--teal);
+}
+
+.highlight-card .highlight-content {
+    padding: 20px;
+}
+
+.highlight-card h3 {
+    color: var(--dark-blue);
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+}
+
+.highlight-card p {
+    margin-bottom: 15px;
+    color: var(--dark-gray);
+    font-size: 1rem;
+}
+
+.highlight-card .date {
+    color: var(--medium-gray);
+    font-size: 0.9rem;
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid var(--border-gray);
+}
+
+/* ==============================
+   Hero Section
+   ============================== */
+.hero-section {
+    position: relative;
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    background: url('../images/background-image.webp') center/cover no-repeat;
+}
+
+.hero-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.hero-section p {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.back-link{
+    text-decoration: none;
+    background-color: var(--primary-blue);
+    padding: 10px;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* ==============================
+   Responsive Styles
+   ============================== */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .highlights-container {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .section-image {
+        height: 200px;
+    }
+
+    .highlight-image {
+        height: 180px;
+    }
+
+    .hero-section h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-section p {
+        font-size: 0.9rem;
+    }
+}
+/* ==============================
+   Popup Form Styles
+   ============================== */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.popup:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-content {
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transform: translateY(-50px);
+    transition: transform 0.4s ease;
+}
+
+.popup:target .popup-content {
+    transform: translateY(0);
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.8rem;
+    color: var(--medium-gray);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: var(--pink-accent);
+}
+
+.popup-content h2 {
+    color: var(--dark-blue);
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px solid var(--light-blue);
+    padding-bottom: 10px;
+}
+
+.popup form {
+    display: flex;
+    flex-direction: column;
+}
+
+.popup label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--dark-blue);
+}
+
+.popup input {
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border-gray);
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.popup input:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(58, 134, 255, 0.2);
+}
+
+.popup .btn {
+    padding: 12px 20px;
+    background-color: var(--primary-blue);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.popup .btn:hover {
+    background-color: var(--dark-blue);
+    transform: translateY(-2px);
+}
+
+/* Responsive adjustments for popup */
+@media (max-width: 768px) {
+    .popup-content {
+        padding: 25px;
+        width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    .popup-content {
+        padding: 20px;
+    }
+    
+    .popup input {
+        padding: 10px 12px;
+    }
+    
+    .popup .btn {
+        padding: 10px 15px;
+    }
+}

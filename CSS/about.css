@@ -80,8 +80,8 @@
             background-position: center;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            width: 50%;
-            height: auto;
+            min-width: 50%;
+            min-height: 300px;
         }
 
         .mission .container{
@@ -178,6 +178,11 @@
             color: white;
             font-weight: bold;
             font-size: 1.5rem;
+            overflow: hidden;
+        }
+
+        .member-photo img{
+            width: 100%;
         }
 
         .member-info h3 {
@@ -196,7 +201,7 @@
             background-color: #2b2d42;
             color: white;
             padding: 60px 0;
-            margin-bottom: 60px;
+            margin-bottom: 10px;
         }
 
         .stats-container {
@@ -227,78 +232,6 @@
             opacity: 0.8;
         }
 
-        /* Footer */
-        footer {
-            background-color: #2b2d42;
-            color: white;
-            padding: 60px 0 30px;
-        }
-
-        .footer-content {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        .footer-about {
-            flex: 2;
-            min-width: 300px;
-        }
-
-        .footer-about h3 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            color: #ffd166;
-        }
-
-        .footer-links, .footer-contact {
-            flex: 1;
-            min-width: 200px;
-        }
-
-        .footer-links h4, .footer-contact h4 {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            color: #ffd166;
-        }
-
-        .footer-links ul {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 10px;
-        }
-
-        .footer-links a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-links a:hover {
-            color: #4cc9f0;
-        }
-
-        .footer-contact p {
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-        }
-
-        .footer-contact p::before {
-            content: "•";
-            margin-right: 10px;
-            color: #4cc9f0;
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid #4a4e69;
-            color: #adb5bd;
-        }
 
         /* Responsive Adjustments */
         @media (max-width: 768px) {
@@ -310,4 +243,10 @@
             .vision-item, .team-member, .stat-item {
                 max-width: 100%;
             }
+
+            .mission{
+                flex-direction: column;
+                padding: 30px;
+            }
+            
         }

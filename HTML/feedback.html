@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback / Request - SkillsPark</title>
+    <link rel="icon" href="../images/logo.png">
+    <link rel="stylesheet" href="../CSS/feedback.css">
+</head>
+<body>
+    <section class="feedback-hero">
+        <div class="container">
+            <h1>Feedback / Request</h1>
+            <p>We value your input! Share your feedback or request new resources to help us improve EduSphere for everyone.</p>
+        </div>
+    </section>
+    <section class="feedback-section">
+        <div class="container">
+            <form class="feedback-form">
+                <h2>Send Us Your Feedback</h2>
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="type">Type</label>
+                    <select id="type" name="type" required>
+                        <option value="">Select type</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="request">Resource Request</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Write your feedback or request here..." required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="../JS/load-navbar.js"></script>
+</body>
+</html>

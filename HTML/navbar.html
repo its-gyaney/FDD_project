@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EduSphere - Navigation</title>
+    <title>SkillsPark - Navigation</title>
     <style>
         /* Base Styles */
         * {
@@ -36,19 +36,77 @@
         }
 
         .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #3a86ff;
-            text-decoration: none;
+            width: 10rem;
+        }
+
+        .logo img{
+            width: 100%;
+            height: auto;
         }
 
         .nav-links {
             display: flex;
+            align-items: center;
             list-style: none;
         }
 
         .nav-links li {
             margin-left: 2rem;
+            position: relative;
+        }
+
+        /* Dropdown Styles */
+        .dropdown {
+            position: relative;
+        }
+        .dropdown-toggle::after {
+            content: ' ▼';
+            font-size: 0.7em;
+        }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            padding: 15px;
+            list-style: none;
+            top: 100%;
+            right: 0;
+            left: auto;
+            background: #fff;
+            min-width: 220px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            border-radius: 0 0 8px 8px;
+            z-index: 10;
+            white-space: nowrap;
+        }
+        .dropdown-menu li {
+            margin: 0;
+        }
+        .dropdown-menu a {
+            padding: 0.75rem 1.5rem;
+            display: block;
+            color: #333;
+            background: none;
+            font-size: 1rem;
+        }
+        .dropdown-menu a:hover {
+            background: #f0f4fa;
+            color: #3a86ff;
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        /* Mobile Dropdown */
+        @media (max-width: 768px) {
+            .dropdown-menu {
+                position: static;
+                box-shadow: none;
+                min-width: 100%;
+                border-radius: 0;
+            }
+            .dropdown.open .dropdown-menu {
+                display: block;
+            }
         }
 
         .nav-links a {
@@ -86,6 +144,28 @@
             font-size: 1.5rem;
             cursor: pointer;
             color: #333;
+        }
+
+        /* Profile Circle Styles */
+        .profile-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: #3a86ff;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            box-shadow: 0 2px 8px rgba(58,134,255,0.08);
+            border: 2px solid #fff;
+            transition: box-shadow 0.2s;
+        }
+        .profile-icon:hover, .profile-dropdown.open .profile-icon {
+            box-shadow: 0 4px 16px rgba(58,134,255,0.18);
         }
 
         /* Mobile Styles */
@@ -126,18 +206,36 @@
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="navbar-container">
-            <a href="#" class="logo">EduSphere</a>
+            <a href="index.html" class="logo">
+                <img src="../images/logo.png" alt="">
+            </a>
             
             <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
             
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="members.html">Members Portal</a></li>
-                <li><a href="activities.html">Activities</a></li>
-                <li><a href="resources.html">Resources</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="members.html">Members</a></li>
+                <li class="dropdown">
+                    <a href="activities.html" class="dropdown-toggle">Activities</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="clubs.html">Clubs</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="highlights.html">Highlights</a></li>
+                    </ul>
+                </li>
+                <li><a href="resources.html" class="dropdown-toggle">Resources</a>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="login-nav-item"><a href="join.html">Log In</a></li>
+                <li class="dropdown profile-dropdown" id="profile-nav-item" style="display:none">
+                    <a href="#" class="dropdown-toggle profile-icon" id="profileCircle" style="padding:0;margin:0;display:inline-block;vertical-align:middle;"></a>
+                    <ul class="dropdown-menu">
+                        <li id="profile-email" style="color: #3a86ff; font-weight: 600; font-size: 1rem; cursor:default;"></li>
+                        <li><a href="#" id="logout-btn">Logout</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </nav>
@@ -149,7 +247,6 @@
 
         mobileMenuBtn.addEventListener('click', () => {
             navLinks.classList.toggle('active');
-            
             // Change icon based on menu state
             if (navLinks.classList.contains('active')) {
                 mobileMenuBtn.textContent = '✕';
@@ -165,6 +262,58 @@
                 mobileMenuBtn.textContent = '☰';
             });
         });
+
+        // Dropdown toggle for mobile
+        document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+            toggle.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    const parent = this.parentElement;
+                    parent.classList.toggle('open');
+                }
+            });
+        });
+
+        // Profile/Login UI logic
+        function updateProfileNav() {
+            const loggedInUser = localStorage.getItem('loggedInUser');
+            const loginNav = document.getElementById('login-nav-item');
+            const profileNav = document.getElementById('profile-nav-item');
+            const profileCircle = document.getElementById('profileCircle');
+            const profileEmail = document.getElementById('profile-email');
+            if (loggedInUser) {
+                if (loginNav) loginNav.style.display = 'none';
+                if (profileNav) profileNav.style.display = '';
+                // Set first letter of email in profile circle and show email in dropdown
+                try {
+                    const user = JSON.parse(loggedInUser);
+                    if (user && user.email) {
+                        if (profileCircle) {
+                            const letter = user.email.trim().charAt(0).toUpperCase();
+                            profileCircle.textContent = letter;
+                        }
+                        if (profileEmail) {
+                            profileEmail.textContent = user.email;
+                        }
+                    }
+                } catch(e) {}
+            } else {
+                if (loginNav) loginNav.style.display = '';
+                if (profileNav) profileNav.style.display = 'none';
+                if (profileEmail) profileEmail.textContent = '';
+            }
+        }
+        updateProfileNav();
+        // Logout handler
+        const logoutBtn = document.getElementById('logout-btn');
+        if (logoutBtn) {
+            logoutBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                localStorage.removeItem('loggedInUser');
+                updateProfileNav();
+                window.location.href = 'index.html';
+            });
+        }
     </script>
 </body>
 </html>

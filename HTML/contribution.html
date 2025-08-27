@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contribute to SkillsPark</title>
+    <link rel="icon" href="../images/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background: #f8f9fa;
+            color: #222;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(79, 70, 229, 0.08);
+            padding: 40px 24px;
+        }
+        .main-title {
+            text-align: center;
+            font-size: 2rem;
+            color: #3a86ff;
+            margin-bottom: 18px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #4a4e69;
+            margin-bottom: 30px;
+        }
+        .divider {
+            width: 60px;
+            height: 4px;
+            background: #ff006e;
+            margin: 0 auto 30px auto;
+            border-radius: 2px;
+        }
+        .contribution-form {
+            margin-top: 10px;
+        }
+        .form-group {
+            margin-bottom: 18px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #222;
+            font-weight: 500;
+        }
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #dbeafe;
+            border-radius: 6px;
+            font-size: 1rem;
+            background: #f8f9fa;
+            color: #222;
+            transition: border-color 0.2s;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: #3a86ff;
+            outline: none;
+        }
+        .btn-submit {
+            background: #3a86ff;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 12px 32px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-top: 10px;
+            display: block;
+            width: 100%;
+        }
+        .btn-submit:hover {
+            background: #ff006e;
+        }
+        .btn-return {
+            display: block;
+            margin: 24px auto 0 auto;
+            background: #ffd166;
+            color: #2b2d42;
+            text-align: center;
+            border: none;
+            border-radius: 6px;
+            padding: 12px 32px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.2s;
+            width: fit-content;
+        }
+        .btn-return:hover {
+            background: #3a86ff;
+            color: #fff;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 18px 8px;
+            }
+            .main-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="main-title">Contribute to EduSphere</h1>
+        <p class="subtitle">Share your notes, guides, or tools and help fellow students thrive!</p>
+        <div class="divider"></div>
+        <form class="contribution-form">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="type">Contribution Type</label>
+                <select id="type" name="type" required>
+                    <option value="">Select type</option>
+                    <option value="notes">Notes</option>
+                    <option value="sample-questions">Sample Questions</option>
+                    <option value="study-material">Study Material</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="details">Details / Link</label>
+                <textarea id="details" name="details" rows="4" placeholder="Describe your contribution or provide a link..." required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Submit Contribution</button>
+        </form>
+        <a href="resources.html" class="btn-return">← Back to

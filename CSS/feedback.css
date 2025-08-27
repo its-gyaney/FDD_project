@@ -1,0 +1,172 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #f8f9fa;
+    color: #222;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero Section */
+.feedback-hero {
+    background: url("../images/feedback.jpg") center center/cover no-repeat;
+    position: relative;
+    color: #fff;
+    text-align: center;
+    padding: 70px 20px 40px 20px;
+    margin-bottom: 30px;
+    border-radius: 0 0 24px 24px;
+    box-shadow: 0 4px 24px rgba(79, 70, 229, 0.08);
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feedback-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(44,62,80,0.65);
+    z-index: 1;
+    border-radius: inherit;
+}
+
+.feedback-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.feedback-hero h1, .feedback-hero p {
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.feedback-hero h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.feedback-hero p {
+    font-size: 1.1rem;
+    opacity: 0.95;
+}
+
+/* Feedback Form Section */
+.feedback-section {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(79, 70, 229, 0.08);
+    padding: 40px 20px;
+    margin-bottom: 40px;
+}
+
+.feedback-form h2 {
+    color: #3a86ff;
+    margin-bottom: 24px;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #222;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #dbeafe;
+    border-radius: 6px;
+    font-size: 1rem;
+    background: #f8f9fa;
+    color: #222;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #3a86ff;
+    outline: none;
+}
+
+.btn-submit {
+    background: #3a86ff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 32px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+}
+
+.btn-submit:hover {
+    background: #4cc9f0;
+}
+
+.btn-return {
+    display: block;
+    margin: 24px auto 0 auto;
+    background: #3a86ff;
+    color: #fff;
+    text-align: center;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 32px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s;
+    width: fit-content;
+}
+
+.btn-return:hover {
+    background: #4cc9f0;
+    color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .container {
+        padding: 0 8px;
+    }
+    .feedback-hero h1 {
+        font-size: 1.5rem;
+    }
+    .feedback-section {
+        padding: 24px 16px;
+    }
+    .form-group {
+        margin-bottom: 16px;
+    }
+    .btn-submit,
+    .btn-return {
+        padding: 10px 24px;
+        font-size: 0.9rem;
+    }
+}
